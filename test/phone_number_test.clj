@@ -9,7 +9,7 @@
 (fact "cleans-number-with-dots"
        (phone-number/number "555.867.5309") => "5558675309")
 
-(future-fact "valid-when-11-digits-and-first-is-1"
+(fact "valid-when-11-digits-and-first-is-1"
       (phone-number/number "19876543210") => "9876543210")
 
 (future-fact "invalid-when-11-digits"
