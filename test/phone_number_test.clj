@@ -1,11 +1,12 @@
 (ns phone-number-test
-  (:require [phone-number :refer :all])
+  (:require [phone-number :refer :all]
+            [clojure.string :as str])
   (:use midje.sweet))
 
-(future-fact "cleans-number"
+(fact "cleans-number"
       (phone-number/number "(123) 456-7890") => "1234567890")
 
-(future-fact "cleans-number-with-dots"
+(fact "cleans-number-with-dots"
        (phone-number/number "555.867.5309") => "5558675309")
 
 (future-fact "valid-when-11-digits-and-first-is-1"
