@@ -18,16 +18,16 @@
 (fact "invalid-when-9-digits"
        (phone-number/number "123456789") => "0000000000")
 
-(future-fact "area-code"
+(fact "area-code"
        (phone-number/area-code "1234567890") => "123")
 
-(future-fact "area-code-with-dots"
+(fact "area-code-with-dots"
       (phone-number/area-code "555.867.5309") => "555")
 
-(future-fact "area-code-with-parentheses"
+(fact "area-code-with-parentheses"
       (phone-number/area-code "(987) 654-3210") => "987")
 
-(future-fact "area-code-with-full-us-phone-number"
+(fact "area-code-with-full-us-phone-number"
        (phone-number/area-code "11234567890") => "123")
 
 (future-fact "pretty-print"

@@ -14,3 +14,8 @@
   (-> phone-number
       number-without-punctuation-or-blanks
       change-to-valid-number))
+
+(defn area-code [phone-number]
+  (-> phone-number
+      number
+      (subs 0 3)))
