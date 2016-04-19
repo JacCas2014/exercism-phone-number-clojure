@@ -12,10 +12,10 @@
 (fact "valid-when-11-digits-and-first-is-1"
       (phone-number/number "19876543210") => "9876543210")
 
-(future-fact "invalid-when-11-digits"
+(fact "invalid-when-11-digits"
        (phone-number/number "21234567890") => "0000000000")
 
-(future-fact "invalid-when-9-digits"
+(fact "invalid-when-9-digits"
        (phone-number/number "123456789") => "0000000000")
 
 (future-fact "area-code"
