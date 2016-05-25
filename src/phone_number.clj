@@ -19,3 +19,7 @@
   (-> phone-number
       number
       (subs 0 3)))
+
+(defn pretty-print [phone-number]
+  (let [number (number phone-number)]
+    (str "(" (area-code phone-number) ") " (subs number 3 6) "-" (subs number 6 10))))

@@ -30,11 +30,11 @@
 (fact "area-code-with-full-us-phone-number"
        (phone-number/area-code "11234567890") => "123")
 
-(future-fact "pretty-print"
+(fact "pretty-print"
        (phone-number/pretty-print "1234567890") => "(123) 456-7890")
 
-(future-fact "pretty-print-with-dots"
+(fact "pretty-print-with-dots"
        (phone-number/pretty-print "555.867.5309") => "(555) 867-5309")
 
-(future-fact "pretty-print-with-full-us-phone-number"
+(fact "pretty-print-with-full-us-phone-number"
        (phone-number/pretty-print "19876543210") => "(987) 654-3210")
